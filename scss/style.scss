@@ -1,0 +1,10 @@
+
+@use'custom';
+
+@use 'componends/typography';
+
+$k1 : #00FF00;
+
+a {
+    color: $k1;
+}
