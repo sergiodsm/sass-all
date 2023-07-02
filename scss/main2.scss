@@ -1,0 +1,60 @@
+
+// this is to keep the original styles (prmary, secondary, etc
+$primary: #c29938;
+$secondary: #c29977;
+
+// there are functions and variables required to compile a new theme
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+// this is the definition of a new theme, instead of btn-secondary, it will be: btn-erstefirst, for example.
+$custom-theme-colors1: (
+    "erstefirst": #242F9B,
+    "erstesecond": #646FD4,
+    "erstethird": #9BA3EB,
+    "erstefourth": #DBDFFD,
+    "erstefifth": #FFFFFF
+);
+
+// another theme
+$custom-theme-colors2: (
+    "zweitefirst": #324259,
+    "zweitesecond": #CDC2AE,
+    "zweitethird": #ECE5C7,
+    "zweitefourth": #9CE3A8,
+    "zweitefifth": #FFFFFF
+);
+
+
+$custom-theme-colors3: (
+    "drittefirst": #023047,
+    "drittesecond": #219EBC,
+    "drittethird": #8ECAE6,
+    "drittefourth": #FFB703,
+    "drittefifth": #EEEEEE // FFFFFF ORIGINALLY
+);
+
+
+$custom-theme-colors4: (
+    "viertefirst": #0A1428,
+    "viertesecond": #14213D,
+    "viertethird": #FCA311,
+    "viertefourth": #E5E5E5,
+    "viertefifth": #EEEEEE //ORIGINALLY FFFFFF
+);
+
+
+$custom-theme-colors5: (
+    "funftefirst": #0D3B66,
+    "funftesecond": #F95738,
+    "funftethird": #F4D35E,
+    "funftefourth": #FAF0CA,
+    "funftefifth": #EEEEEE //FFFFFF ORIGINALLY
+);
+
+
+// $theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+$theme-colors: map-merge-multiple($theme-colors, $custom-theme-colors1, $custom-theme-colors2, $custom-theme-colors3, $custom-theme-colors4, $custom-theme-colors5);
+
+@import '../node_modules/bootstrap/scss/bootstrap';
